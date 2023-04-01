@@ -14,7 +14,7 @@ export const uploadImage = async (image: File): Promise<UploadImageReturnProps> 
     formData.append('image', image);  
 
     //получаем данные по файлу с cloudinary при входных данных по файлу formData
-    const { data } = await axios.post('/upload', formData, {
+    const { data } = await axios.post('https://twitter-clone-mongodb-server.herokuapp.com/upload', formData, {
         headers: {
             'Content-Type': 'multipart/form-data',
         }
