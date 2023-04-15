@@ -36,15 +36,6 @@ function App() {
   const isReady = loadingStatus !== LoadingStatus.NEVER && 
                   loadingStatus !== LoadingStatus.LOADING;
 
-  console.log("isAuth");
-  console.log(isAuth);
-
-  console.log("loadingStatus");
-  console.log(loadingStatus);
-
-  console.log("isReady");
-  console.log(isReady);
-
   React.useEffect(() => {
     if ((!isAuth) || loadingStatus === LoadingStatus.ERROR )   {
       //возвращаемся на страницу авторизации и регистрации когда нету авторизованного пользователя
